@@ -1,0 +1,10 @@
+{
+  "name": "digital-literary-space-site",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "build": "npm --prefix web run build && node scripts/stage-site-build.mjs"
+  }
+}
