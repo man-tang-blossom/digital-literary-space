@@ -1,0 +1,20 @@
+{
+  "id": "work-example-jing-ye-si",
+  "title": "静夜思",
+  "authorId": "author-li-bai",
+  "era": "唐",
+  "genre": "五言绝句",
+  "text": "此处暂不录入正文；正式内容应同时记录版本与出处。",
+  "textNote": "结构示例，不作为校勘文本使用。",
+  "appreciation": {
+    "level": "brief",
+    "summary": "示例赏析。正式条目应简洁说明作品如何通过具体意象形成情感。",
+    "highlights": ["明月", "故园"]
+  },
+  "allusions": [],
+  "imageryIds": ["imagery-moon"],
+  "themeIds": ["theme-homesickness"],
+  "relatedWorks": [],
+  "verificationStatus": "unverified",
+  "sources": []
+}

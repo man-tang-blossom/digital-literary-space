@@ -1,0 +1,9 @@
+{
+  "id": "author-li-bai",
+  "name": "李白",
+  "dynasty": "唐",
+  "summary": "唐代诗人。此条目仅用于演示数据结构。",
+  "representativeWorks": ["work-example-jing-ye-si"],
+  "relatedAuthors": [],
+  "relatedThemes": ["theme-homesickness"]
+}

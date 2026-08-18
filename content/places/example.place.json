@@ -1,0 +1,15 @@
+{
+  "id": "place-example",
+  "name": "人间采风示例",
+  "region": "待填写",
+  "summary": "记录现实中的花木、山水与季节体验，并与文学内容相连。",
+  "seasonIds": [],
+  "imageryIds": [],
+  "literaryRefs": [],
+  "practicalInfo": {
+    "status": "needs-current-verification",
+    "transport": "",
+    "openingHours": ""
+  },
+  "sources": []
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "relationTypes": [
+    { "id": "created", "name": "创作", "sourceType": "author", "targetType": "work" },
+    { "id": "contains-imagery", "name": "包含意象", "sourceType": "work", "targetType": "imagery" },
+    { "id": "expresses", "name": "表达主题", "sourceType": "work", "targetType": "theme" },
+    { "id": "echoes", "name": "彼此呼应", "sourceType": "any", "targetType": "any" },
+    { "id": "alludes-to", "name": "用典或化用", "sourceType": "work", "targetType": "work" },
+    { "id": "appears-in", "name": "收录于选集", "sourceType": "any", "targetType": "collection" },
+    { "id": "story-about", "name": "关于作者", "sourceType": "story", "targetType": "author" },
+    { "id": "related-place", "name": "关联地点", "sourceType": "any", "targetType": "place" }
+  ]
+}

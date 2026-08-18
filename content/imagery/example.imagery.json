@@ -1,0 +1,18 @@
+{
+  "id": "imagery-moon",
+  "name": "月",
+  "system": "天地",
+  "description": "连接时间、空间、故园、团圆与孤独的古典意象。",
+  "expressions": [
+    {
+      "text": "明月",
+      "quote": "",
+      "workId": "",
+      "verificationStatus": "unverified",
+      "note": "结构示例，等待正式作品关联"
+    }
+  ],
+  "workIds": ["work-example-jing-ye-si"],
+  "themeIds": ["theme-homesickness"],
+  "relatedImagery": ["imagery-water", "imagery-wine"]
+}

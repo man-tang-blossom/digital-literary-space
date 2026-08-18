@@ -1,0 +1,9 @@
+{
+  "id": "collection-jianghu-farewell",
+  "title": "江湖再见",
+  "subtitle": "古人的退场、远行与重逢",
+  "description": "收录那些不失从容的告别：各自前路漫长，却仍相信山水之间会有回声。",
+  "itemRefs": [],
+  "themeIds": ["theme-farewell", "theme-reunion"],
+  "status": "draft"
+}

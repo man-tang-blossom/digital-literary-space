@@ -1,0 +1,17 @@
+{
+  "id": "pattern-baoxianghua",
+  "name": "宝相花",
+  "aliases": ["宝仙花", "宝莲花"],
+  "period": "隋唐盛行，后世延续",
+  "description": "以莲花、牡丹等花草为母体，将花瓣、卷叶和宝珠式圆点重新组合成放射对称的理想花形。它不是一种具体植物，而是一朵被设计出来的吉祥之花。",
+  "historicalUses": ["铜镜", "织锦", "陶瓷", "金银器", "石刻", "建筑彩画", "敦煌藻井与边饰"],
+  "classicalRecord": "北宋李诫《营造法式》把宝相花列入建筑石作花纹制度。物质证据显示它在隋唐时期已经广泛流行。",
+  "modernUses": ["服饰与箱包", "首饰与珐琅", "文创产品", "家居与空间装饰", "数字纹样与品牌视觉"],
+  "verificationStatus": "verified",
+  "sources": [
+    { "title": "宝相花", "publisher": "故宫博物院", "url": "https://www.dpm.org.cn/lemmas/242132.html" },
+    { "title": "宝相花纹镜", "publisher": "故宫博物院数字文物库", "url": "https://digicol.dpm.org.cn/cultural/detail?id=b14bb00a969a4e21b7c4c46ad2bda46d&lid=6dd6d480fad04c4c46ad2bda46d&source=2" },
+    { "title": "莫高窟第79窟", "publisher": "敦煌研究院", "url": "https://www.dha.ac.cn/info/1425/3618.htm" },
+    { "title": "传统纹样，在生活中绽放", "publisher": "人民日报", "url": "https://ent.people.com.cn/n1/2025/1118/c1012-40605751.html" }
+  ]
+}

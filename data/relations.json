@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "relations": [
+    {
+      "source": "author-li-bai",
+      "target": "work-example-jing-ye-si",
+      "relationType": "created",
+      "description": "李白是《静夜思》的作者。"
+    },
+    {
+      "source": "work-example-jing-ye-si",
+      "target": "theme-homesickness",
+      "relationType": "expresses",
+      "description": "作品借月夜书写思乡之情。"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "story-example",
+  "title": "作者故事示例",
+  "authorIds": ["author-li-bai"],
+  "summary": "这里将收录简短、重要或富有人情味的作者故事。正式内容必须说明它属于史实、笔记轶闻还是后世传说。",
+  "tone": ["温柔"],
+  "historicity": "anecdotal",
+  "verificationStatus": "unverified",
+  "sources": []
+}
