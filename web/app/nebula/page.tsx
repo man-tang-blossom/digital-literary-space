@@ -11,7 +11,7 @@ export default function NebulaPage() {
       <section className="page-intro">
         <p className="page-kicker">Literary Nebula</p>
         <h1>文学星云</h1>
-        <p>作者、意象与主题从不孤立。轻触一个名字，看见文字之间隐约相连的路径。</p>
+        <p>从夏天出发。缩放、拖动，再靠近一朵花、一场雨或一个节日。</p>
       </section>
       <LiteraryNebula />
     </main>

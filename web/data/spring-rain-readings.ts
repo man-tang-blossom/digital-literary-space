@@ -1,0 +1,48 @@
+import type { SummerStormReading } from "./summer-storm-readings";
+
+export const springRainReadings: SummerStormReading[] = [
+  {
+    slug: "han-yu-early-spring-rain",
+    title: "早春呈水部张十八员外",
+    author: "韩愈",
+    era: "唐",
+    excerpt: ["天街小雨润如酥，草色遥看近却无。", "最是一年春好处，绝胜烟柳满皇都。"],
+    lines: ["天街小雨润如酥，草色遥看近却无。", "最是一年春好处，绝胜烟柳满皇都。"],
+    translation: "京城街上的小雨细润得像酥油，远望草色已经连成一片，走近却还看不真切。一年里最好的春光，正在这刚有草色的时候，胜过杨柳满城的暮春。",
+    note: "韩愈写的是早春刚刚有一点颜色的时刻。雨很细，草也很小，远看有，近看又像没有。",
+    sourceUrl: "https://www.gushiwen.cn/mingju/juv_4c0e77d957e4.aspx",
+  },
+  {
+    slug: "du-fu-spring-night-rain",
+    title: "春夜喜雨",
+    author: "杜甫",
+    era: "唐",
+    excerpt: ["好雨知时节，当春乃发生。", "随风潜入夜，润物细无声。"],
+    lines: ["好雨知时节，当春乃发生。", "随风潜入夜，润物细无声。", "野径云俱黑，江船火独明。", "晓看红湿处，花重锦官城。"],
+    translation: "好雨像知道时节，正赶在春天万物生长的时候落下。它跟着风在夜里悄悄来，滋润万物，没有声响。野外的小路被云遮得一片黑，江上只有船灯独自亮着。等到天明再看，成都城里被雨打湿的花已经开得很重。",
+    note: "卡片只放前四句，全文保留八句。杜甫先写夜雨无声，最后才让人看见满城湿花。",
+    sourceUrl: "https://m.gushiwen.cn/shiwenv_d48451f00541.aspx",
+  },
+  {
+    slug: "zhinan-apricot-rain",
+    title: "绝句",
+    author: "志南",
+    era: "南宋",
+    excerpt: ["古木阴中系短篷，杖藜扶我过桥东。", "沾衣欲湿杏花雨，吹面不寒杨柳风。"],
+    lines: ["古木阴中系短篷，杖藜扶我过桥东。", "沾衣欲湿杏花雨，吹面不寒杨柳风。"],
+    translation: "我把带篷的小船系在古树阴下，拄着藜杖走过桥东。杏花时节的细雨快要沾湿衣裳，吹到脸上的杨柳风已经不觉寒冷。",
+    note: "这里有一个正在过桥的人。春雨落到衣上，春风吹到脸上，天气就在人的身体上慢慢暖起来。",
+    sourceUrl: "https://m.gushiwen.cn/mingju/juv_6ee372efe8e5.aspx",
+  },
+  {
+    slug: "du-mu-qingming",
+    title: "清明",
+    author: "杜牧",
+    era: "唐",
+    excerpt: ["清明时节雨纷纷，路上行人欲断魂。", "借问酒家何处有？牧童遥指杏花村。"],
+    lines: ["清明时节雨纷纷，路上行人欲断魂。", "借问酒家何处有？牧童遥指杏花村。"],
+    translation: "清明时节细雨纷纷，路上的行人心里很是惆怅。想问哪里有酒家可以歇脚，牧童远远指向杏花深处的村子。",
+    note: "这场春雨落在赶路的人身上。前一句的雨很密，后一句忽然有了牧童和杏花村，路也有了去处。",
+    sourceUrl: "https://zh.wikisource.org/zh-hans/%E6%B8%85%E6%98%8E_(%E6%9D%9C%E7%89%A7)",
+  },
+];

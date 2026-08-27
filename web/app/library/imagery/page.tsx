@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArchiveHeader } from "../../../components/ArchiveHeader";
 import { SiteHeader } from "../../../components/SiteHeader";
 import { imageryArchive } from "../../../data/archive-content";
@@ -23,6 +24,7 @@ export default function ImageryPage() {
                 <h3>{phrase.text}</h3>
                 {(phrase.source || phrase.author) && <p>{[phrase.author, phrase.era, phrase.source].filter(Boolean).join(" · ")}</p>}
                 {phrase.note && <small>{phrase.note}</small>}
+                {phrase.detailHref && <Link href={phrase.detailHref}>进入相关篇目 →</Link>}
                 <span>{statusText[phrase.status]}</span>
               </article>
             ))}

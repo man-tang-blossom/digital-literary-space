@@ -1,0 +1,48 @@
+import type { SummerStormReading } from "./summer-storm-readings";
+
+export const winterRainReadings: SummerStormReading[] = [
+  {
+    slug: "song-jiong-winter-rain",
+    title: "冬雨",
+    author: "宋褧",
+    era: "元",
+    excerpt: ["十月楚天雨，同云暗八荒。", "前山应是雪，此地不成霜。"],
+    lines: ["十月楚天雨，同云暗八荒。", "前山应是雪，此地不成霜。", "气混朝岚重，声兼夜漏长。", "闲庭断来往，幽思渺无方。"],
+    translation: "十月的楚地落着雨，厚云遮暗四方。前山大概已经下雪了，这里却连霜也还没有结。雨气和晨雾混在一起，很重；夜里的雨声又和更漏声缠在一起，很长。庭院里断了来往，人静下来，心事也没有一个尽头。",
+    note: "这首正好写在雨和雪之间。远山已经是雪，近处还在下雨，冬天就在这两种天气的交界处。",
+    sourceUrl: "https://www.gushiwen.cn/shiwenv_c797c63c1fbe.aspx",
+  },
+  {
+    slug: "zhu-bian-winter-rain",
+    title: "冬雨",
+    author: "朱弁",
+    era: "南宋",
+    excerpt: ["冬雨不成雪，北风寒未深。", "山藏千垒秀，云结四垂阴。"],
+    lines: ["冬雨不成雪，北风寒未深。", "山藏千垒秀，云结四垂阴。", "迥洒凌朝阁，残声入夜衾。", "端能洗兵甲，足慰此时心。"],
+    translation: "冬雨还没有变成雪，北风的寒意也还不算最深。群山藏着层层秀色，云在四面结成阴沉的天幕。雨从高处落下来，余声一直进到夜里的被子旁。诗人盼望这场雨能洗去兵甲，暂且安慰眼前的心。",
+    note: "朱弁把冬雨写得很实。它没有变成雪，雨声却已经进了夜衾。最后一句带着他久困异地时盼望天下安定的心事。",
+    sourceUrl: "https://m.gushiwen.cn/shiwenv_cd250b65ad5f.aspx",
+  },
+  {
+    slug: "wang-changling-cold-rain-river",
+    title: "芙蓉楼送辛渐·其一",
+    author: "王昌龄",
+    era: "唐",
+    excerpt: ["寒雨连江夜入吴，平明送客楚山孤。", "洛阳亲友如相问，一片冰心在玉壶。"],
+    lines: ["寒雨连江夜入吴，平明送客楚山孤。", "洛阳亲友如相问，一片冰心在玉壶。"],
+    translation: "寒雨连着江水，在夜里进入吴地。天亮送别朋友，只看见楚山孤单地立着。若洛阳的亲友问起我，就请告诉他们，我的心还像玉壶里的冰一样清白。",
+    note: "“寒雨”写的是一夜江上的送别。它不必执意归到某一个节令，放在冬雨里很合适，因为诗里有雨、有江、有孤山，也有“冰心”。",
+    sourceUrl: "https://zh.wikisource.org/zh-hans/%E8%8A%99%E8%93%89%E6%A8%93%E9%80%81%E8%BE%9B%E6%BC%B8_%28%E5%AF%92%E9%9B%A8%E9%80%A3%E6%B1%9F%E5%A4%9C%E5%85%A5%E5%90%B3%29",
+  },
+  {
+    slug: "lu-you-november-wind-rain",
+    title: "十一月四日风雨大作·其二",
+    author: "陆游",
+    era: "南宋",
+    excerpt: ["僵卧孤村不自哀，尚思为国戍轮台。", "夜阑卧听风吹雨，铁马冰河入梦来。"],
+    lines: ["僵卧孤村不自哀，尚思为国戍轮台。", "夜阑卧听风吹雨，铁马冰河入梦来。"],
+    translation: "我僵卧在孤村里，并不为自己悲哀，心里还想着为国家去边塞戍守。夜深躺着听风雨，梦里竟有披甲的战马踏过冰封的河流。",
+    note: "陆游把十一月的风雨听成了铁马冰河。屋外是一夜冬雨，梦里却仍有人赶往边地。",
+    sourceUrl: "https://www.gushiwen.cn/shiwenv.aspx?id=38c4a0c84fe9",
+  },
+];

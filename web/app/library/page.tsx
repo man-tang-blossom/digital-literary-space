@@ -12,10 +12,23 @@ const imagerySystems = [
   { name: "水", kind: "山河", words: "东流水 · 沧海 · 烟笼寒水 · 澄江似练", note: "时间、离愁、通达与无尽" },
   { name: "酒", kind: "器物", words: "金樽清酒 · 把酒东风 · 且尽手中杯", note: "相逢、放达、告别与自我宽慰" },
   { name: "葫芦", kind: "器物", words: "匏 · 瓠 · 壶卢 · 福禄 · 酒瓢", note: "果实、容器、药壶与朴素的祝愿" },
+  { name: "鹤与虎", kind: "动物", words: "鹤鸣九皋 · 梅妻鹤子 · 猛虎掉尾", note: "清远的隐士，与山林的威势" },
 ];
 
 const collections = [
+  { title: "节令篇：新春", subtitle: "从除夕的爆竹与守岁，走到元夕的火树银花", status: "原文与节俗已归栏", href: "/library/festivals/new-year" },
+  { title: "四时篇：春夏秋冬", subtitle: "从草色初生，到风雪夜归，循着节气读四季", status: "四季入口已归栏", href: "/library/seasons" },
+  { title: "节令篇：七夕", subtitle: "银河、针线、乞巧楼与一座宋城的秋夜", status: "原文与译文已归栏", href: "/library/festivals/qixi" },
+  { title: "梦境篇：从天姥山到庄生梦蝶", subtitle: "李白梦入天姥，庄子化蝶，李商隐在锦瑟声里回望", status: "两篇已归栏", href: "/library/poetry/dreaming-tianmu" },
+  { title: "词人篇：灯影、长亭与旧梦", subtitle: "温庭筠、柳永、晏几道，从闺阁歌声到别后旧梦", status: "三位词人已归栏", href: "/library/poets/liuyong-wentingyun" },
+  { title: "诗人篇：李白，梦境与真实", subtitle: "从天姥山、沉香亭，走到桃花潭与黄河之水", status: "第一辑已归栏", href: "/library/poets/li-bai" },
+  { title: "文章篇：唐宋八大家", subtitle: "八个人，八种文章气质；从敢言到山水，从变法到兄弟情", status: "八盏灯已点亮", href: "/library/eight-masters" },
+  { title: "花事篇：花各有性", subtitle: "牡丹、荷花、海棠、菊花与一整年的心事", status: "第一辑已归栏", href: "/library/flowers" },
+  { title: "雨篇：春雨、夏雨、秋雨、冬雨", subtitle: "从一场疾风骤雨开始，慢慢收录四季的雨", status: "已归栏", href: "/library/rain" },
+  { title: "美人篇：四大美人", subtitle: "从杨玉环开始，看见被诗、画与后世反复讲述的女性", status: "杨玉环已归栏", href: "/library/beauties/yang-yuhuan" },
   { title: "静处：禅与山水", subtitle: "佛偈、清光与人在尘世安住的片刻", status: "第一辑已归栏", href: "/library/stillness" },
+  { title: "游记篇：小石潭记", subtitle: "水尤清冽，清而带凉", status: "已连入水系意象", href: "/library/travel/xiaoshitan" },
+  { title: "梦忆篇：张岱", subtitle: "从西湖夜戏的繁华，走到雪夜与国破后的旧梦", status: "第一辑已归栏", href: "/library/travel/huxinting" },
   { title: "江湖再见", subtitle: "古人的退场、远行与重逢", status: "第一辑已归栏", href: "/library/jianghu-farewell" },
   { title: "风雪行人", subtitle: "关山、孤客、马蹄与远行", status: "首批素材已归栏", href: "/library/wind-snow" },
   { title: "踏雪寻梅", subtitle: "梅花、雪、灯与清洁的心", status: "选题已建立" },

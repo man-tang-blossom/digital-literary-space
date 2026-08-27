@@ -6,6 +6,7 @@ export type ArchivePhrase = {
   status: "verified" | "to-check" | "modern";
   note?: string;
   sourceUrl?: string;
+  detailHref?: string;
 };
 
 export const imageryArchive: Record<string, { title: string; subtitle: string; description: string; phrases: ArchivePhrase[] }> = {
@@ -89,6 +90,7 @@ export const imageryArchive: Record<string, { title: string; subtitle: string; d
       { text: "澄江静如练", source: "《晚登三山还望京邑》", author: "谢朓", era: "南朝齐", status: "verified" },
       { text: "盈盈一水间", source: "《迢迢牵牛星》", author: "佚名", era: "汉", status: "verified" },
       { text: "滚滚长江东逝水", source: "《临江仙·滚滚长江东逝水》", author: "杨慎", era: "明", status: "verified" },
+      { text: "清冽", source: "《小石潭记》", author: "柳宗元", era: "唐", status: "verified", note: "水尤清冽。清而带凉，是小石潭的水，也是文章最后留下的气息。", detailHref: "/library/travel/xiaoshitan" },
       { text: "扁舟沧浪", status: "to-check" },
       { text: "江潮淼淼", status: "to-check" },
       { text: "涧水浮落花", status: "to-check" },
@@ -99,6 +101,19 @@ export const imageryArchive: Record<string, { title: string; subtitle: string; d
       { text: "水如环佩月如襟", status: "to-check" },
       { text: "江澄水浴秋", status: "to-check" },
       { text: "蝶梦水云乡", status: "to-check" }
+    ]
+  },
+  animal: {
+    title: "动物篇",
+    subtitle: "鹤的清远，虎的险峻与力量",
+    description: "动物进入诗文后，往往不只是动物。鹤可以是高洁、长寿和隐士的身影；虎则带着山林的危险、威势与人面对困境时的惊惧。",
+    phrases: [
+      { text: "鹤鸣于九皋，声闻于野", source: "《诗经·小雅·鹤鸣》", author: "《诗经》", era: "先秦", status: "verified", note: "鹤在深泽鸣叫，声音却传到旷野；后来常被借作贤者虽隐、声名仍可远闻。" },
+      { text: "梅妻鹤子", source: "林逋故事", author: "林逋", era: "北宋", status: "verified", note: "孤山种梅养鹤的文人生活，后来成了清雅隐逸的一种想象。", detailHref: "/library/flowers/lin-bu-little-plum" },
+      { text: "闲云孤鹤", source: "《池上闲吟二首·其二》", author: "白居易", era: "唐", status: "verified", note: "以云与鹤写自在、无所系属的人。" },
+      { text: "猛虎又掉尾，磨牙皓秋霜", source: "《北上行》", author: "李白", era: "唐", status: "verified", note: "太行道上的虎，写的是乱世北行的实在危险。" },
+      { text: "朝避猛虎，夕避长蛇", source: "《蜀道难》", author: "李白", era: "唐", status: "verified", note: "虎与长蛇让蜀道的险，不再只是山路的险。" },
+      { text: "虎啸风生", note: "虎啸常与山风、威势相连；后续可继续扩展到典籍与绘画。", status: "to-check" }
     ]
   }
 };
