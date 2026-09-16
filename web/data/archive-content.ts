@@ -125,6 +125,8 @@ export const farewellPhrases: ArchivePhrase[] = [
   { text: "从此应多好消息，莫忘江上一闲人。", source: "《送郑阁赴闽辟》", author: "贯休", era: "唐末五代", status: "verified", note: "祝友人前程顺遂，也轻轻留下不要忘我的请求。", sourceUrl: "https://m.gushici.net/mingju/47/38346/219867.html" },
   { text: "一曲清歌满樽酒，人生何处不相逢。", source: "《金柅园》", author: "晏殊", era: "北宋", status: "verified", note: "告别并非终结，人生仍有重逢之地。", sourceUrl: "https://www.gushiwenku.cn/mingju/bdb4f05c/" },
   { text: "数声风笛离亭晚，君向潇湘我向秦。", source: "《淮上与友人别》", author: "郑谷", era: "唐", status: "verified", note: "同在渡口听见风笛，转身却走向两个方向。" },
+  { text: "挥手自兹去，萧萧班马鸣。", source: "《送友人》", author: "李白", era: "唐", status: "verified", note: "告别说到最后，只剩一次挥手和离群马匹的鸣声。", sourceUrl: "https://zh.wikisource.org/zh-hans/%E9%80%81%E5%8F%8B%E4%BA%BA_(%E6%9D%8E%E7%99%BD)" },
+  { text: "寒雨连江夜入吴，平明送客楚山孤。", source: "《芙蓉楼送辛渐·其一》", author: "王昌龄", era: "唐", status: "verified", note: "一夜寒雨与一座孤山，把送别写得清冷而明澈。", sourceUrl: "https://zh.wikisource.org/zh-hans/%E8%8A%99%E8%93%89%E6%A8%93%E9%80%81%E8%BE%9B%E6%BC%B8" },
   { text: "青山不改，绿水长流。", author: "来源待考", status: "to-check", note: "常见于近现代告别语境，暂不标作某位古人诗句。" }
 ];
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArchiveHeader } from "../../../../components/ArchiveHeader";
 import { SiteHeader } from "../../../../components/SiteHeader";
 
-export const metadata: Metadata = { title: "楚辞神祇：九歌" };
+export const metadata: Metadata = { title: "神话篇 · 九歌诸神" };
 
 const heaven = [
   { name: "东皇太一", slug: "dong-huang-tai-yi", role: "天之尊神", image: "高台上鼓声很重，香草和白玉已经摆好。人群并没有真正看见他，只知道他来了。天忽然显得很高，所有人的声音都低了下来。", note: "通常被解释为《九歌》中最尊贵的天神。" },
@@ -34,7 +34,7 @@ function DeityCards({ items }: { items: typeof heaven }) {
 
 export default function NineSongsPage() {
   return <main className="inner-page archive-detail nine-songs-page"><SiteHeader />
-    <ArchiveHeader kicker="Mythology 02" title="楚辞神祇：九歌" intro="云、水、山、日光，与人的生死相思。" status="神话志 · 楚辞 · 神祇谱系" />
+    <ArchiveHeader kicker="Mythology 02" title="神话篇 · 九歌诸神" intro="云、水、山、日光，与人的生死相思。" status="屈原《九歌》· 十一神" />
     <section className="nine-opening"><p>《九歌》原本是楚地祭祀时唱的歌。屈原把它写成诗以后，神不再只是神。云中君会飘远，湘君与湘夫人隔着水相望，山鬼在深山里等一个没有来的人。</p><p>这里收录《九歌》里的神灵，也收录他们在古代图像、当代绘画与音乐中留下的样子。</p><small>《九歌》有十一篇。前十篇分别祭祀神灵，《礼魂》一般被看作送神之曲。神灵身份在古注与后世研究中有不同解释，本馆会把“原文所见”“常见解释”“后世传说”分开记录。</small></section>
     <section className="nine-ritual"><div className="archive-section__heading"><p>01 / Ritual</p><h2>一场楚地的迎神仪式</h2><span>从天到地，从生到死，从相逢到送别</span></div><div className="nine-ritual__text"><p>鼓声先响起来，香草、玉器和酒摆在席上。巫觋起舞，人们等着神从云里、水上、山中来到人间。</p><p>《九歌》不是一张神仙名单。它更像一场仪式：东皇太一先被迎来，最后以《礼魂》送走。中间经过云、水、太阳、大河、山岭，也经过人最躲不开的几件事——等待、相思、出生、衰老、死亡。</p></div><ol className="nine-route"><li>东皇太一</li><li>云中君 · 东君 · 大司命 · 少司命</li><li>湘君 · 湘夫人 · 河伯 · 山鬼</li><li>国殇</li><li>礼魂</li></ol></section>
     <section className="nine-section"><div className="archive-section__heading"><p>02 / Heaven</p><h2>天上的神</h2><span>云、太阳与人的寿命</span></div><DeityCards items={heaven} /></section>

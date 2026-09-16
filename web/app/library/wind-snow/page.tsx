@@ -3,13 +3,13 @@ import { ArchiveHeader } from "../../../components/ArchiveHeader";
 import { SiteHeader } from "../../../components/SiteHeader";
 import { windSnowPhrases } from "../../../data/archive-content";
 
-export const metadata: Metadata = { title: "风雪行人" };
+export const metadata: Metadata = { title: "关山行旅" };
 
 export default function WindSnowPage() {
   return (
     <main className="inner-page archive-detail">
       <SiteHeader />
-      <ArchiveHeader kicker="Collection 02" title="风雪行人" intro="在风雪里飞奔的人：关山、马蹄、孤客，也有尚未冷却的少年心。" status="古诗与现代拟古分栏保存" />
+      <ArchiveHeader kicker="Collection 02" title="关山行旅" intro="在风雪里飞奔的人：关山、马蹄、孤客，也有尚未冷却的少年心。" status="古诗与现代拟古分栏保存" />
       <section className="quote-gallery quote-gallery--snow">
         {windSnowPhrases.map((item, index) => (
           <article key={item.text}>

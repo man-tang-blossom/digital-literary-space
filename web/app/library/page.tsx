@@ -2,174 +2,67 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "../../components/SiteHeader";
 
-export const metadata: Metadata = { title: "文学藏馆" };
+export const metadata: Metadata = { title: "文学藏馆 · 目录" };
 
-const imagerySystems = [
-  { name: "月", kind: "天地", words: "明月 · 月白 · 素月 · 月满空山", note: "故园、团圆、孤独与时间" },
-  { name: "金", kind: "器物与色彩", words: "金风玉露 · 金樽 · 金波 · 金炉", note: "华美、秋意、酒宴与光泽" },
-  { name: "玉", kind: "器物与品格", words: "冰清玉润 · 琼枝玉树 · 春泉漱玉", note: "清洁、温润、声音与风骨" },
-  { name: "山", kind: "山河", words: "巴山夜雨 · 春山眉黛 · 月满空山", note: "归隐、阻隔、远望与精神居所" },
-  { name: "水", kind: "山河", words: "东流水 · 沧海 · 烟笼寒水 · 澄江似练", note: "时间、离愁、通达与无尽" },
-  { name: "酒", kind: "器物", words: "金樽清酒 · 把酒东风 · 且尽手中杯", note: "相逢、放达、告别与自我宽慰" },
-  { name: "葫芦", kind: "器物", words: "匏 · 瓠 · 壶卢 · 福禄 · 酒瓢", note: "果实、容器、药壶与朴素的祝愿" },
-  { name: "鹤与虎", kind: "动物", words: "鹤鸣九皋 · 梅妻鹤子 · 猛虎掉尾", note: "清远的隐士，与山林的威势" },
-];
+type CatalogueItem = { title: string; intro: string; href: string };
+type CatalogueSection = { number: string; title: string; intro: string; items: CatalogueItem[] };
 
-const collections = [
-  { title: "节令篇：新春", subtitle: "从除夕的爆竹与守岁，走到元夕的火树银花", status: "原文与节俗已归栏", href: "/library/festivals/new-year" },
-  { title: "四时篇：春夏秋冬", subtitle: "从草色初生，到风雪夜归，循着节气读四季", status: "四季入口已归栏", href: "/library/seasons" },
-  { title: "节令篇：七夕", subtitle: "银河、针线、乞巧楼与一座宋城的秋夜", status: "原文与译文已归栏", href: "/library/festivals/qixi" },
-  { title: "梦境篇：从天姥山到庄生梦蝶", subtitle: "李白梦入天姥，庄子化蝶，李商隐在锦瑟声里回望", status: "两篇已归栏", href: "/library/poetry/dreaming-tianmu" },
-  { title: "词人篇：灯影、长亭与旧梦", subtitle: "温庭筠、柳永、晏几道，从闺阁歌声到别后旧梦", status: "三位词人已归栏", href: "/library/poets/liuyong-wentingyun" },
-  { title: "诗人篇：李白，梦境与真实", subtitle: "从天姥山、沉香亭，走到桃花潭与黄河之水", status: "第一辑已归栏", href: "/library/poets/li-bai" },
-  { title: "文章篇：唐宋八大家", subtitle: "八个人，八种文章气质；从敢言到山水，从变法到兄弟情", status: "八盏灯已点亮", href: "/library/eight-masters" },
-  { title: "花事篇：花各有性", subtitle: "牡丹、荷花、海棠、菊花与一整年的心事", status: "第一辑已归栏", href: "/library/flowers" },
-  { title: "雨篇：春雨、夏雨、秋雨、冬雨", subtitle: "从一场疾风骤雨开始，慢慢收录四季的雨", status: "已归栏", href: "/library/rain" },
-  { title: "美人篇：四大美人", subtitle: "从杨玉环开始，看见被诗、画与后世反复讲述的女性", status: "杨玉环已归栏", href: "/library/beauties/yang-yuhuan" },
-  { title: "静处：禅与山水", subtitle: "佛偈、清光与人在尘世安住的片刻", status: "第一辑已归栏", href: "/library/stillness" },
-  { title: "游记篇：小石潭记", subtitle: "水尤清冽，清而带凉", status: "已连入水系意象", href: "/library/travel/xiaoshitan" },
-  { title: "梦忆篇：张岱", subtitle: "从西湖夜戏的繁华，走到雪夜与国破后的旧梦", status: "第一辑已归栏", href: "/library/travel/huxinting" },
-  { title: "江湖再见", subtitle: "古人的退场、远行与重逢", status: "第一辑已归栏", href: "/library/jianghu-farewell" },
-  { title: "风雪行人", subtitle: "关山、孤客、马蹄与远行", status: "首批素材已归栏", href: "/library/wind-snow" },
-  { title: "踏雪寻梅", subtitle: "梅花、雪、灯与清洁的心", status: "选题已建立" },
-  { title: "梦入星河", subtitle: "水天、星河、扁舟与梦境", status: "选题已建立" },
-  { title: "清夜纳凉", subtitle: "流萤、小扇、荷风与月色", status: "选题已建立" },
-  { title: "从容风骨", subtitle: "风雨之中，仍然缓步而行", status: "选题已建立" },
-  { title: "器物篇：葫芦", subtitle: "从田野果实到福禄意象", status: "已归入意象词典", href: "/library/objects/gourd" },
-];
-
-const editorialRooms = [
-  { title: "文心百味", latin: "Literary Flavors", text: "用饮食、气味和触感重新讲述不同时代的文学气质。", sample: "唐诗像盛宴，宋词如品茶——这是一种文学化评论，而不是文学史结论。", href: "/library/literary-flavors" },
-  { title: "辞语新生", latin: "Language Renewal", text: "同一件人间小事，换一种语言，便有了不同的光。", sample: "从“在乡镇卫生院上班”到“在小镇当医生”，事实相近，叙事气质却已经改变。", href: "/library/language-renewal" },
-  { title: "人间采风", latin: "Notes from Places", text: "把现实中的花海、步道、城市和季节，与文学里的草木山河重新连接。", sample: "这里将记录坝河、雁栖湖、西湖与太子湾，也会在发布前重新核验现实信息。" },
+const catalogue: CatalogueSection[] = [
+  { number: "01", title: "神话 · 纹样 · 器物", intro: "从神灵、图案，到被人握在手里的日常器物。", items: [
+    { title: "神话篇 · 精卫填海", intro: "微木与沧海的信念", href: "/library/myths/jingwei" },
+    { title: "神话篇 · 九歌诸神", intro: "屈原《九歌》十一神", href: "/library/myths/nine-songs" },
+    { title: "纹样篇 · 宝相花", intro: "一朵花的秩序", href: "/library/patterns/baoxianghua" },
+    { title: "器物篇 · 葫芦", intro: "匏、瓠、壶卢", href: "/library/objects/gourd" },
+    { title: "器物篇 · 汝窑", intro: "雨过天青云破处", href: "/library/objects/porcelain/ru-kiln" },
+  ] },
+  { number: "02", title: "四时 · 节令 · 天气", intro: "沿着草木、雨声、灯火和节气，读一年在人间的变化。", items: [
+    { title: "四时 · 总览", intro: "春夏秋冬四张淡色卡片", href: "/library/seasons" },
+    { title: "四时篇 · 春", intro: "立春、雨水、惊蛰、春分、清明、谷雨", href: "/library/seasons/spring" },
+    { title: "四时篇 · 夏", intro: "荷尖、梅雨、石榴、麦田、蝉鸣、蛙声与夏夜", href: "/library/seasons/summer" },
+    { title: "四时篇 · 秋", intro: "月色、梧桐、新雨、暮江与远行", href: "/library/seasons/autumn" },
+    { title: "四时篇 · 冬", intro: "雪、炉火、夜归人与风雨", href: "/library/seasons/winter" },
+    { title: "雨篇 · 春雨", intro: "细雨、杏花雨与清明烟雨", href: "/library/rain#spring-rain" },
+    { title: "雨篇 · 夏雨", intro: "夏末的一场疾风骤雨", href: "/library/rain#summer-rain" },
+    { title: "雨篇 · 秋雨", intro: "残荷、灯与归期", href: "/library/rain#autumn-rain" },
+    { title: "节令篇 · 新春", intro: "除夕、元日、元夕", href: "/library/festivals/new-year" },
+    { title: "节令篇 · 七夕", intro: "牛郎织女与乞巧", href: "/library/festivals/qixi" },
+  ] },
+  { number: "03", title: "花 · 月 · 景色 · 意象", intro: "花各有性，月照人间；一条山水路也能通向许多诗。", items: [
+    { title: "花事 · 总览", intro: "花各有性", href: "/library/flowers" },
+    { title: "月下人间", intro: "相望、离别与时间感", href: "/library/moonlit-world" },
+    { title: "景色篇 · 行旅山水", intro: "落日、平芜与溪荷", href: "/library/collections/landscape-journey" },
+    { title: "意象词典", intro: "文学星云的底层素材库", href: "/library/imagery" },
+  ] },
+  { number: "04", title: "少女 · 爱情 · 人生 · 日常", intro: "笑语、初见、婚书、告别，以及一个人慢慢明白的事。", items: [
+    { title: "少女篇 · 笑语喧然", intro: "斗草、踏歌、采莲、浣衣", href: "/library/girls-in-company" },
+    { title: "心事篇 · 初见", intro: "相遇、等待、青梅与桃花", href: "/library/first-love" },
+    { title: "日常篇 · 婚礼", intro: "欢喜与契约", href: "/library/life/marriage" },
+    { title: "人生感悟", intro: "流光、飞鸿与苔花", href: "/library/collections/life-reflections" },
+    { title: "江湖再见", intro: "远行、送别、重逢与退场", href: "/library/jianghu-farewell" },
+    { title: "关山行旅", intro: "关山、马蹄、孤客、风雪、报国心", href: "/library/wind-snow" },
+  ] },
+  { number: "05", title: "诗人 · 词人 · 文章", intro: "顺着一位写作者的生活、口气与作品，慢慢走近他。", items: [
+    { title: "诗人篇 · 李白", intro: "梦境与真实", href: "/library/poets/li-bai" },
+    { title: "诗人篇 · 刘禹锡", intro: "秋日胜春朝", href: "/library/poets/liu-yuxi" },
+    { title: "词人篇 · 灯影、长亭与旧梦", intro: "温庭筠、柳永、晏几道", href: "/library/poets/liuyong-wentingyun" },
+    { title: "文章篇 · 唐宋八大家", intro: "八盏灯", href: "/library/eight-masters" },
+  ] },
+  { number: "06", title: "游记 · 静处 · 登临", intro: "在山水、亭台和一场梦里，看见人的去处。", items: [
+    { title: "游记篇 · 小石潭记", intro: "清冽", href: "/library/travel/xiaoshitan" },
+    { title: "梦忆篇 · 张岱", intro: "明末繁华与国破旧梦", href: "/library/travel/huxinting" },
+    { title: "静处篇", intro: "禅与山水", href: "/library/stillness" },
+    { title: "梦境篇", intro: "仙梦、蝶梦与迷梦", href: "/library/poetry/dreaming-tianmu" },
+    { title: "登临篇 · 亭台楼阁", intro: "名胜与无名栏杆", href: "/library/landmarks" },
+  ] },
 ];
 
 export default function LibraryPage() {
-  return (
-    <main className="inner-page library-page">
-      <SiteHeader />
-      <section className="page-intro page-intro--wide library-intro">
-        <p className="page-kicker">The Growing Archive</p>
-        <h1>文学藏馆</h1>
-        <p>这里保存正在生长的意象、主题、故事与文字。已经核验的内容会进入正式展陈，尚未确认的句子仍留在书页背面等待考证。</p>
-        <div className="library-legend" aria-label="内容状态说明">
-          <span><i className="status-dot status-dot--ready" />正式内容</span>
-          <span><i className="status-dot status-dot--draft" />整理中</span>
-        </div>
-      </section>
-
-      <section className="archive-section new-room-section" id="new-rooms">
-        <div className="archive-section__heading">
-          <p>New / Living Archive</p>
-          <h2>新开的房间</h2>
-          <span>从神话的信念，走到纹样的秩序</span>
-        </div>
-        <div className="new-room-grid">
-          <Link className="new-room-card new-room-card--nine-songs" href="/library/myths/nine-songs">
-            <small>Mythology · 楚辞神祇</small>
-            <h3>九歌</h3>
-            <p>云、水、山、日光，与人的生死相思。</p>
-            <span>进入神祇谱系 →</span>
-          </Link>
-          <Link className="new-room-card new-room-card--myth" href="/library/myths/jingwei">
-            <small>Mythology · 神话志</small>
-            <h3>精卫填海</h3>
-            <p>一只小鸟、一根细枝，与无边东海之间漫长而不屈的对峙。</p>
-            <span>阅读古籍与思想札记 →</span>
-          </Link>
-          <Link className="new-room-card new-room-card--pattern" href="/library/patterns/baoxianghua">
-            <small>Traditional Patterns · 传统纹样</small>
-            <h3>宝相花</h3>
-            <p>莲与牡丹被重新组织为秩序、光芒与盛唐气象。</p>
-            <span>观看纹样档案 →</span>
-          </Link>
-        </div>
-      </section>
-
-      <section className="archive-section" id="imagery">
-        <div className="archive-section__heading">
-          <p>01 / Imagery</p>
-          <h2>意象词典</h2>
-          <span>从一个词，走进许多作品</span>
-        </div>
-        <div className="imagery-grid">
-          {imagerySystems.map((item) => (
-            <article className="imagery-card" key={item.name}>
-              <p>{item.kind}</p>
-              <h3>{item.name}</h3>
-              <p className="imagery-card__words">{item.words}</p>
-              <p className="imagery-card__note">{item.note}</p>
-              <span>示例词待逐条核验</span>
-            </article>
-          ))}
-        </div>
-        <Link className="archive-enter" href="/library/imagery">进入金、玉、山、水意象词典 →</Link>
-      </section>
-
-      <section className="archive-section" id="collections">
-        <div className="archive-section__heading">
-          <p>02 / Collections</p>
-          <h2>主题选集</h2>
-          <span>让散落在时代里的句子彼此相逢</span>
-        </div>
-        <div className="collection-list">
-          {collections.map((item, index) => (
-            <article key={item.title}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <div><h3>{item.title}</h3><p>{item.subtitle}</p></div>
-              {item.href ? <Link href={item.href}>{item.status} →</Link> : <small>{item.status}</small>}
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="archive-section" id="essays">
-        <div className="archive-section__heading">
-          <p>03 / Essays</p>
-          <h2>文字房间</h2>
-          <span>原文之外，也保存观看文学的方法</span>
-        </div>
-        <div className="editorial-grid">
-          {editorialRooms.map((room) => (
-            <article key={room.title}>
-              <p>{room.latin}</p>
-              <h3>{room.title}</h3>
-              <p>{room.text}</p>
-              <blockquote>{room.sample}</blockquote>
-              {room.href ? <Link className="editorial-enter" href={room.href}>进入栏目 →</Link> : <span>栏目建设中</span>}
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="archive-section archive-section--split" id="stories">
-        <div className="archive-section__heading">
-          <p>04 / Stories</p>
-          <h2>作者小事</h2>
-          <span>只留下重要、温柔而有人情味的片刻</span>
-        </div>
-        <div className="story-placeholder">
-          <p>故事将注明它是史实、笔记轶闻，还是后世传说。</p>
-          <strong>不把可爱的传闻伪装成历史，<br />也不让历史失去人的温度。</strong>
-          <span>第一批作者故事正在选择</span>
-        </div>
-      </section>
-
-      <section className="archive-section color-preview" id="colors">
-        <div className="archive-section__heading">
-          <p>05 / Classical Colors</p>
-          <h2>古典色彩</h2>
-          <span>颜色也可以成为一条文学路径</span>
-        </div>
-        <div className="color-strip" aria-label="古典色彩预览">
-          <div style={{ background: "#789f92" }}><span>青绿</span></div>
-          <div style={{ background: "#b8d3dc" }}><span>天青</span></div>
-          <div style={{ background: "#e7ece8" }}><span>月白</span></div>
-          <div style={{ background: "#e1c06a" }}><span>鹅黄</span></div>
-          <div style={{ background: "#53666d" }}><span>黛色</span></div>
-          <div style={{ background: "#a65f4b" }}><span>朱砂</span></div>
-        </div>
-      </section>
-    </main>
-  );
+  return <main className="inner-page library-page catalogue-page">
+    <SiteHeader />
+    <header className="catalogue-hero"><p>Digital Literary Space / Contents</p><h1>文学藏馆</h1><span>目录</span><strong>34 篇</strong><div><a href="#catalogue">从目录开始</a><Link href="/nebula">进入文学星云</Link></div></header>
+    <section className="catalogue-opening"><p>这里的每一篇，都从一句诗、一个意象、一段古人的生活开始。它们可以独自阅读，也可以顺着花、水、月、人物和时代继续走下去。</p></section>
+    <nav className="catalogue-nav" aria-label="文学藏馆目录导航">{catalogue.map((section) => <a href={`#catalogue-${section.number}`} key={section.number}><span>{section.number}</span>{section.title}</a>)}</nav>
+    <section className="catalogue-sections" id="catalogue">{catalogue.map((section) => <section className="catalogue-section" id={`catalogue-${section.number}`} key={section.number}><header><span>{section.number}</span><div><p>Catalogue</p><h2>{section.title}</h2><em>{section.intro}</em></div></header><div className="catalogue-grid">{section.items.map((item, index) => <Link href={item.href} key={item.title}><small>{String(index + 1).padStart(2, "0")}</small><h3>{item.title}</h3><p>{item.intro}</p><span>进入篇章 →</span></Link>)}</div></section>)}</section>
+    <footer className="catalogue-footer"><p>目录会随着新的收录继续生长。</p><Link href="/library/imagery">从意象词典继续漫游 →</Link></footer>
+  </main>;
 }

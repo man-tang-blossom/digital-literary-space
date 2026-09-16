@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteHeader } from "../../../../components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "梦境篇：梦游天姥吟留别",
+  title: "梦境篇 · 仙梦、蝶梦与迷梦",
   description: "李白《梦游天姥吟留别》：原文、译文与写作时的处境。",
 };
 
@@ -20,8 +20,8 @@ export default function DreamingTianmuPage() {
       <Link className="archive-back" href="/library">← 返回文学藏馆</Link>
       <section className="archive-hero">
         <p className="page-kicker">Dreamscape / 山系 · 梦境 · 自由</p>
-        <h1>梦游天姥吟留别</h1>
-        <span>李白 · 唐</span>
+        <h1>梦境篇</h1>
+        <span>仙梦、蝶梦与迷梦</span>
       </section>
 
       <section className="reader-text">
@@ -45,12 +45,20 @@ export default function DreamingTianmuPage() {
         <p>所以这不是一首只顾好看的游仙诗。梦里的山越高，洞天越亮，醒来时现实就越清楚。最后那句“不肯折腰”，不是一句突然的豪言：它是一个理想碰过壁的人，仍然给自己留下的底线。</p>
       </section>
 
+      <section className="reader-analysis">
+        <p className="page-kicker">04 / A Dream in Mist</p>
+        <h2>雾失楼台</h2>
+        <blockquote><span>雾失楼台，月迷津渡。</span><span>桃源望断无寻处。</span></blockquote>
+        <p>秦观在郴州旅舍写下这几句。楼台、渡口、月色都还在，路却忽然看不清了。它不是仙境，也不是蝶梦，而是人在清醒处遇见的一阵迷离。</p>
+        <Link href="/library/collections/moon-and-dream">读秦观《踏莎行·郴州旅舍》 →</Link>
+      </section>
+
       <section className="dream-links" aria-label="相关意象">
         <p>Related Threads</p>
         <Link href="/library/imagery#mountain">山系意象：天姥、千岩、青崖 →</Link>
         <Link href="/library/imagery#water">水系意象：镜湖、剡溪、东流水 →</Link>
         <Link href="/library/flowers">回到花事篇 →</Link>
-        <Link href="/library/poetry/zhuangsheng-dream">梦境篇另一扇门：庄生晓梦 →</Link>
+        <Link href="/library/poetry/zhuangsheng-dream">梦境篇：庄生晓梦与《锦瑟》 →</Link>
       </section>
       <footer className="source-list travel-sources"><p>文本与题解参照：<a href="https://zh.wikisource.org/zh-hans/%E5%A4%A2%E9%81%8A%E5%A4%A9%E5%A7%A5%E5%90%9F%E7%95%99%E5%88%A5" target="_blank" rel="noreferrer">《梦游天姥吟留别》原文</a>；写作背景参照 <a href="https://www.chinanews.com.cn/cul/2023/11-20/10114846.shtml" target="_blank" rel="noreferrer">中新网题解</a>。</p></footer>
     </main>

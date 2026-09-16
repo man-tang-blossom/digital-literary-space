@@ -16,6 +16,7 @@ const sources = [
   ["《诗经·匏有苦叶》", "https://zh.wikisource.org/zh/%E8%A9%A9%E7%B6%93/%E5%8C%8F%E6%9C%89%E8%8B%A6%E8%91%89"],
   ["故宫博物院：葫芦瓶", "https://www.dpm.org.cn/lemmas/239383.html"],
   ["成都博物馆：葫芦里到底装了什么药？", "https://www.cdmuseum.com/xinwen/202112/2558.html"],
+  ["故宫博物院：合卺礼", "https://www.dpm.org.cn/lemmas/241008.html"],
   ["吴昌硕《葫芦》", "https://artsandculture.google.com/asset/%E8%91%AB%E8%8A%A6/xAEEe7yUzAXndQ?hl=zh-CN"],
   ["北京画院：明清绘画中的葫芦", "https://bjaa2013.bjaa.com.cn/news.html?clg=171&hcs=11&news=1585"],
 ];
@@ -27,12 +28,13 @@ export default function GourdPage() {
       <ArchiveHeader
         kicker="Object Archive 01"
         title="器物篇：葫芦"
-        intro="它是果实、容器、酒瓢、药壶，也是婚礼中的合卺器与想象中神仙身边的法器。“葫芦”与“福禄”谐音，是中国古代一种亲切的祝福。"
+        intro="它是果实、容器、酒瓢、药壶，也是古人举行合卺礼时所用的酒器与想象中神仙身边的法器。“葫芦”与“福禄”谐音，是中国古代一种亲切的祝福。"
         status="器物 · 意象 · 已核验"
       />
 
       <section className="object-opening">
         <p>葫芦并不神秘。它最早来自普通人的日常生活：藤蔓攀援，果实成熟后可剖作瓢，用来舀水、盛酒、储存种子与药物。后来，人们才一点一点把祝愿、信仰与想象放进它圆润的腹中。</p>
+        <p>婚礼上，一只葫芦会被剖作两个瓢。新郎新娘各执一瓢饮酒，称为“合卺”。两个瓢原本来自同一只葫芦，饮毕仍可合在一起。后来人们说的交杯酒，便承接着这个意思。</p>
       </section>
 
       <section className="object-section">
@@ -41,6 +43,7 @@ export default function GourdPage() {
           <p>葫芦古称“匏”“瓠”“壶卢”等。《诗经》里已经有它的记录：</p>
           <blockquote>匏有苦叶，济有深涉。<br />七月食瓜，八月断壶。</blockquote>
           <p>前一句写渡河与婚嫁，后一句写农事节令。葫芦最早就是农家植物和日常器物的记忆：长在田地和篱边，成熟以后采收、晾晒，再被加工成瓢。</p>
+          <p>《礼记·昏义》写新婚夫妇“共牢而食，合卺而酳”。“卺”指剖开的匏瓜。它的味道原本带苦，古人却用它盛酒，意思很朴素：往后的日子，甘苦都由两个人一起尝。</p>
         </div>
       </section>
 

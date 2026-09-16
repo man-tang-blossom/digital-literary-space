@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SiteHeader } from "../../../components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "静处：禅与山水",
+  title: "静处篇 · 禅与山水",
   description: "佛偈、山水与人在尘世安住的片刻。",
 };
 
@@ -46,7 +46,7 @@ export default function StillnessPage() {
       <SiteHeader />
       <section className="stillness-hero">
         <p className="page-kicker">Quiet Room / 心有清光</p>
-        <h1>静处：禅与山水</h1>
+        <h1>静处篇 · 禅与山水</h1>
         <p>这里收佛偈，也收那些没有写“禅”字、却让人慢下来的一瞬。山水在这里不是背景；它们是心安静以后，重新看见的云、月、雨和一条路。</p>
         <blockquote>愿我六根常寂静，<br />心如宝月映琉璃。</blockquote>
         <span>王安石《望江南·归依法》</span>

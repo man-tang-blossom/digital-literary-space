@@ -9,7 +9,7 @@ export default function FarewellPage() {
   return (
     <main className="inner-page archive-detail">
       <SiteHeader />
-      <ArchiveHeader kicker="Collection 01" title="江湖再见" intro="有些告别不说珍重，只饮完一杯酒，各自去往不同的山河。" status="第一辑 · 7 条" />
+      <ArchiveHeader kicker="Collection 01" title="江湖再见" intro="有些告别不说珍重，只饮完一杯酒，各自去往不同的山河。" status="第一辑 · 8 条" />
       <section className="quote-gallery">
         {farewellPhrases.map((item, index) => (
           <article key={item.text}>
