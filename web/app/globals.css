@@ -1335,6 +1335,12 @@ button { font: inherit; }
 .landmark-reader__body > p, .landmark-reader__close > div p { color: #465558; font-size: 18px; line-height: 2.08; }
 .landmark-reader__context small { color: #527f86; font: 400 18px/1.6 var(--serif); letter-spacing: .07em; }
 .landmark-reader__context section p { font-size: 18px; line-height: 2.08; }
+.landmark-reader__place { display: grid; grid-template-columns: 180px 1fr; max-width: 850px; margin: 0 auto; padding: 52px 0; gap: 80px; border-top: 1px solid rgba(111, 148, 149, .22); }
+.landmark-reader__place > div > p { margin: 0; color: #527f86; font: 400 20px/1.5 var(--serif); letter-spacing: .09em; }
+.landmark-reader__place h2 { margin: 14px 0 8px; color: #465558; font: 400 28px/1.4 var(--serif); letter-spacing: .08em; }
+.landmark-reader__place small { display: block; color: #708e91; font: 13px/1.7 var(--sans); letter-spacing: .05em; }
+.landmark-reader__place > p { margin: 0; color: #465558; font: 400 18px/2.08 var(--serif); }
+@media (max-width: 560px) { .landmark-reader__place { display: block; padding: 36px 0; }.landmark-reader__place > p { margin-top: 28px; } }
 .place-reader__reading { display: block; width: fit-content; max-width: 850px; margin: 24px auto 0; padding: 13px 18px; border: 1px solid rgba(100, 143, 149, .35); color: #547e85; font: 14px/1.5 var(--serif); letter-spacing: .08em; transition: background .2s ease, color .2s ease; }.place-reader__reading:hover { background: rgba(213, 229, 227, .5); color: #34494d; }
 
 /* 少女篇 · 群像 · 笑语喧然 */

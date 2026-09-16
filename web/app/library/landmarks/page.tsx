@@ -44,6 +44,7 @@ const landmarkGroups = [
     items: [
       { name: "凤凰台", place: "江苏 · 南京", work: "李白《登金陵凤凰台》", quote: "凤凰台上凤凰游，凤去台空江自流。", note: "旧日传说已经远去，江水仍在眼前流。", href: "/library/landmarks/fenghuangtai" },
       { name: "幽州台", place: "北京", work: "陈子昂《登幽州台歌》", quote: "念天地之悠悠，独怆然而涕下。", note: "四句写尽一个人面对天地时的孤独与不得志。", href: "/library/landmarks/youzhoutai" },
+      { name: "铜雀台", place: "河北 · 邯郸临漳", work: "曹植《铜雀台赋》、杜牧《赤壁》", quote: "东风不与周郎便，铜雀春深锁二乔。", note: "一座为权力与宴乐而起的高台，后来被写成回望三国的一场春梦。", href: "/library/landmarks/tongquetai" },
       { name: "凌虚台", place: "陕西 · 凤翔", work: "苏轼《凌虚台记》", quote: "物之废兴成毁，不可得而知也。", note: "新台刚成，苏轼先想到盛衰无常。台上看山，也看人事。", href: "/library/landmarks/lingxutai-ji" },
       { name: "超然台", place: "山东 · 诸城", work: "苏轼《超然台记》", quote: "凡物皆有可观，苟有可观，皆有可乐。", note: "从一座旧台出发，写人在寻常日子里怎样自得。", href: "/library/landmarks/chaorantai-ji" },
     ],

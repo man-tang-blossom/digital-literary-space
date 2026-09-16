@@ -4,7 +4,7 @@ import { ArchiveHeader } from "../../../../components/ArchiveHeader";
 import { SiteHeader } from "../../../../components/SiteHeader";
 import { supplementalReadings } from "./supplemental-readings";
 
-type Reading = { author: string; title: string; titleType: string; label: string; original: string[]; translation: string; close: string[]; personal: string; echo: string; source: string };
+type Reading = { author: string; title: string; titleType: string; label: string; original: string[]; translation: string; close: string[]; personal: string; echo: string; source: string; place?: { name: string; location: string; description: string } };
 
 const baseReadings: Record<string, Reading> = {
   "xiting-rimou": { author: "李清照", title: "如梦令", titleType: "词牌名", label: "溪亭日暮 · 夏日游赏", original: ["常记溪亭日暮，沉醉不知归路。", "兴尽晚回舟，误入藕花深处。", "争渡，争渡，惊起一滩鸥鹭。"], translation: "我常常想起那次在溪边亭子旁玩到日暮，喝得微醺，竟不知归路。兴致尽了才划船回去，不小心进了荷花深处。急着划出去，急着划出去，惊起了满滩的鸥鹭。", close: ["“常记”不是偶然想起，是这幅画面在心里留得很久。日暮、微醉、荷花与小舟，都是轻快的事。", "“误入”让游赏有了小小的意外。最后两个“争渡”短促急切，鸥鹭一惊，整首词忽然有了水声和翅膀声。"], personal: "我们很难把这次溪亭游赏准确放在某一年。词里的人很放松，喝酒、晚归、划船，全无顾忌。它留住的是李清照较早人生里一份明亮的兴致。她后来会经历南渡、丧夫与流离，但那些更沉重的年月，不该反过来遮住这一日荷花深处的笑闹。", echo: "它也让人看见宋代士人家庭中的另一种日常。女子并非只在闺中等待，她们也会结伴出游、饮酒赏花、把一次玩得忘了归路的下午写进词里。这样的片刻并不能代表所有女性的处境，却留下了一个具体而难得的自由画面。", source: "https://zh.wikisource.org/zh-hans/%E5%A6%82%E5%A4%A2%E4%BB%A4_(%E6%9D%8E%E6%B8%85%E7%85%A7)/%E5%A6%82%E5%A4%A2%E4%BB%A4_(%E5%B8%B8%E8%A8%98%E6%BA%AA%E4%BA%AD%E6%97%A5%E6%9A%AE)" },
@@ -26,6 +26,7 @@ export default async function LandmarkReadingPage({ params }: { params: Promise<
     <section className="landmark-reader__original"><p>原文</p><blockquote>{item.original.map((line) => <span key={line}>{line}</span>)}</blockquote></section>
     <section className="landmark-reader__body"><div><p>译文</p></div><p>{item.translation}</p></section>
     <section className="landmark-reader__body landmark-reader__close"><div><p>咬文嚼字</p></div><div>{item.close.map((note) => <p key={note}>{note}</p>)}</div></section>
+    {item.place && <section className="landmark-reader__place"><div><p>这座台</p><h2>{item.place.name}</h2><small>{item.place.location}</small></div><p>{item.place.description}</p></section>}
     <section className="landmark-reader__context"><p>此时此刻</p><div><section><small>一个人的心绪</small><p>{item.personal}</p></section><section><small>放到时代里</small><p>{item.echo}</p></section></div></section>
     <footer className="source-list landmark-reader__sources"><p>原文参照 <a href={item.source} target="_blank" rel="noreferrer">相关古籍与诗文来源</a>。</p><Link href="/library/landmarks">← 回到登临篇</Link></footer>
   </main>;
